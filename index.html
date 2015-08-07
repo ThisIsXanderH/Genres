@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- Include meta tag to ensure proper rendering and touch zooming -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Include jQuery Mobile stylesheets -->
+<link rel="stylesheet" href="includes/jquery.mobile-1.4.5.min.css">
+
+<!-- Genres stylesheet -->
+<link rel="stylesheet" href="includes/style.css">
+
+<!-- Include the jQuery library -->
+<script src="includes/jquery-1.11.3.min.js"></script>
+
+<!-- Include the jQuery Mobile library -->
+<script src="includes/jquery.mobile-1.4.5.min.js"></script>
+
+<meta charset="utf-8">
+<title>Genres! A fun and challenging game for writers</title>
+</head>
+
+<body>
+
+<div id="pageTitle" data-role="page">
+    <div id="titleHeader"><img src="images/Genres-Header.png"/></div>
+    <div id="titleContent">
+        <div><button id="titleButtonSetup" class="titleButton">Start</button></div>
+        <div><button id="titleButtonHow" class="titleButton">How To Play</button></div>
+        <div><button id="titleButtonCredits" class="titleButton">Credits</button></div>
+        <div><button id="titleButtonSupport" class="titleButton">Patreon</button></div>
+    </div>
+</div>
+
+<div id="pageSetup" data-role="page">
+	<button id="setupButtonBack" onClick="location.href='#pageTitle'">Back</button>
+    <div id="setupContent">
+    	<h1 id="setupContentHeader">Setup</h1>
+        Number of Genres
+        <select id="setupNumGenres" class="setupTimerChange">
+        	<option value="3">3</option>
+        	<option value="4">4</option>
+        	<option value="5" selected>5</option>
+        	<option value="6">6</option>
+        	<option value="7">7</option>
+        	<option value="8">8</option>
+        </select>
+        Timer Length
+        <select id="setupTimerLength" class="setupTimerChange">
+        	<option value="1">1 Minute</option>
+        	<option value="2">2 Minutes</option>
+        	<option value="3">3 Minutes</option>
+        	<option value="4">4 Minutes</option>
+        	<option value="5" selected>5 Minutes</option>
+        	<option value="6">6 Minutes</option>
+        	<option value="7">7 Minutes</option>
+        	<option value="8">8 Minutes</option>
+        	<option value="9">9 Minutes</option>
+        	<option value="10">10 Minutes</option>
+        </select>
+        <div id="setupTotalTime">Test</div>
+        <label><input id="setupStartPrompt" type="checkbox" checked>Start With Story Prompt</label>
+        <button id="setupButtonStart">Next</button>
+    </div>
+</div>
+<div id="pageHidden" data-role="page">
+        <label><input id="setupVibrate" type="checkbox" checked>Vibrate On Alarm</label>
+</div>
+<div id="pageGame" data-role="page">
+	<button id="gameButtonBack">Back</button>
+    <button id="gameButtonPause" data-icon="pause" data-iconpos="notext" disabled="true"></button>
+    <button id="gameButtonMute" data-icon="unmuted" data-iconpos="notext"></button>
+    <button id="gameButtonUnmute" data-icon="muted" data-iconpos="notext" ></button>
+    
+    <div id="gameContent">
+        <div id="gameButtonSlotStart">
+            <div class="hidden">
+            	<a href="#" id="gamePromptLink"></a>
+            <!-- Aside - not sure anything will go in here. LATER NOTE: Is this where the prompts go? Find that out. And also add better comments you fuck. --></div>
+            <div class="shown">
+                <button id="gameButtonStart">Start</button>
+            </div>
+        </div>
+    	<section id="gameSlots">
+        	
+        </section>
+        <div id="gameButtonSlotRestart">
+            <div class="hidden">
+            	<button id="gameButtonRestart">Time's Up! Go Again?</button>
+			</div>
+            <div class="shown">
+	            <!-- Aside - not sure anything will go in here -->
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="pagePause" data-role="page">
+	<div id="pauseContent">
+    	<h1 id="pauseContentHeader">Paused</h1><br>
+<br>
+
+<div id="pageHow" data-role="page">
+	<button id="howButtonBack" onClick="location.href='#pageTitle'">Back</button>
+	<div id="howContent">
+    	<h1 id="howContentHeader">How To Play</h1>
+        To play Genres!, you will need:
+        <ul>
+        	<li>This app</li>
+            <li>Writing Materials (computer, pen + paper)</li>
+            <li>Imagination</li>
+		</ul>
+        First, set up the game and click start.
+        <p>Then start writing a story in the genre presented. Don't worry about quality, the important thing is to be writing.</p>
+        <p>When the timer ticks down, an alarm will sound and you'll be given a new genre. Keep writing the <strong>same story</strong>, but change it to be written in the style of the <strong>new genre</strong>.</p>
+        <p>Continue until the final alarm sounds. Then it's pens down, stop writing - you're done!</p>
+        <p><button onclick="location.href='#pageSetup'">Start</button></p>
+	</div>
+	
+</div>
+<br>
+
+	    <button id="pauseButtonResume">Resume</button>
+    </div>
+</div>
+
+<div id="pageCredits" data-role="page">
+	<button id="creditsButtonBack" onClick="location.href='#pageTitle'">Back</button>
+	<div id="creditsContent">
+    	<h1 id="creditsContentHeader">Credits</h1>
+        <h2 class="no-margin">Idea</h2>
+        Michael Williams, UQWC President<br>
+        <a href="#" class="external-link" data-link='http://uqwritersclub.com/'>UQ Writers' Club Website</a><br>
+        <a href="#" class="external-link" data-link='https://thehossglop.wordpress.com/'>Michael William's Website</a>
+        <h2 class="no-margin">App Development</h2>
+        Xander, Caged Robot<br>
+        <a href="#" class="external-link" data-link='http://cagedrobot.com/'>Caged Robot</a><br>
+        <a href="#" class="external-link" data-link='https://turtleempire.com/'>Xander</a>
+        <h2 class="no-margin">Prompts</h2>
+        Reddit
+        <a href="#" class="external-link" data-link='https://www.reddit.com/r/simpleprompts/'>/r/SimplePrompts</a>
+        <h2 class="no-margin">Graphics</h2>
+        Project Noun<br>
+		<a  href="#" class="external-link" data-link='https://thenounproject.com/ralfschmitzer/collection/media/?oq=pause%20media&cidx=0'>
+			Speaker by Ralf Schmitzer from the Noun Project<br>
+			Pause by Ralf Schmitzer from the Noun Project
+        </a>
+        <h2 class="no-margin">Audio</h2>
+        SoundBible.com<br>
+		<a href="#" class="external-link" data-link='http://soundbible.com/529-Pager-Beeps.html'>Pager Beeps by Mike Koenig</a>
+    </div>
+</div>
+
+<div id="pageSupport" data-role="page">
+	<button id="supportButtonBack" onClick="location.href='#pageTitle'">Back</button>
+	<div id="supportContent">
+    	<h1 id="supportContentHeader">Patreon</h1>
+        <p>This game, and all Caged Robot games, are presented for free and without ads thanks to my Patreon supporters.</p>
+        <p>For a few dollars a month you can get access to early updates, information about current or future projects, and provide your own input for what I should work on next.</p>
+        <a href="#" class="external-link" data-link='https://www.patreon.com/TurtleEmpire'><img src="images/Patreon-Link-Image.png"/></a>
+    </div>
+</div>
+
+<script src="includes/main.js">
+
+</script>
+
+
+</body>
+</html>

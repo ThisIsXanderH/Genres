@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	text-shadow: none
+}
+
+#pageTitle {
+	background-color:#477DD1;
+}
+
+#titleHeader {
+	font-size:36px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:150px;
+	text-align:center;
+}
+
+#titleHeader {
+	width:100%;
+	max-height:100%;
+	bottom:0;
+}
+
+
+#setupButtonBack, #gameButtonBack, #supportButtonBack, #creditsButtonBack, #howButtonBack {
+	position:absolute;
+	top:3px;
+	left:5px;
+	width:80px;
+}
+
+
+#pageSetup {
+	background-color:#E7C7DD;
+}
+
+#setupContent, #gameContent, #supportContent, #creditsContent, #howContent, #pauseContent {
+	position:absolute;
+	top:50px;
+	left:0;
+	right:0;
+	padding-left:20px;
+	padding-right:20px;
+	text-align:center;
+}
+
+#setupContentHeader, #supportContentHeader, #creditsContentHeader, #howContentHeader, #pauseContentHeader {
+	text-align:center;
+}
+
+#pageGame {
+	background-color:#E5AB90;
+}
+
+#gameContent {
+	top:65px;
+	bottom:0;
+}
+
+#gameSlots {
+	position:absolute;
+	top:60px;
+	bottom:0;
+	left:0;
+	right:0;
+	text-align:center;
+	display:flex;
+	flex-direction: column;
+}
+
+#gameSlots > div {
+	-webkit-flex: 1;
+	flex:1;
+}
+
+#titleContent {
+	position:absolute;
+	top:150px;
+	left:0;
+	right:0;
+	bottom:0;
+	padding-left:15%;
+	padding-right:15%;
+	text-align:center;
+	display:flex;
+	flex-direction: column;
+	
+}
+
+#titleContent > div {
+	-webkit-flex: 1;
+	flex:1;
+}
+
+.titleButton {
+	font-size:1.5em;
+	margin:0;
+}
+#gameButtonSlotRestart {
+	position:absolute;
+	bottom:0px;
+	left:0;
+	right:0;
+	padding-left:20px;
+	padding-right:20px;
+	text-align:center;
+}
+
+img {
+	max-width:100%;
+	padding-left:-20px;
+	padding-right:-20px;
+}
+
+ul {
+	text-align:left;
+}
+
+#pageSupport img {
+	
+}
+
+.no-margin {
+	margin:0;
+}
+
+.inverted {
+	background-color:#000000;
+	color:#FFFFFF;
+}
+
+#setupVibrate {
+	position:fixed;
+	left:-300px;
+	top:-300px;
+	/* TODO: This does not works. Make it invisible for a bit.
+	NOTE: Currently just moved to page that is never shown*/
+}
+
+#gamePromptLink {
+	color:black;
+	text-decoration:underline;
+}
+
+#pageHow {
+	background-color:#AEDCB2;
+}
+
+#pageCredits {
+	background-color:#FDEAA7;
+}
+
+#pageSupport {
+	background-color:#9FD1E5;
+}
+
+#pagePause {
+	background-color:#41D156;
+}
+
+#gameButtonPause {
+	position:absolute;
+	right:25px;
+	top:10px;
+	
+}
+
+#gameButtonMute, #gameButtonUnmute {
+	position:absolute;
+	right:75px;
+	top:10px;
+}
+
+	/*
+#gameButtonMute {
+	position:absolute;
+	right:5px;
+	/*width:20px;*/
+/*}
+#gameButtonPause {
+	position:absolute;
+	right:30px;
+	/*width:20px;*/
+/*}*/
+
+
+.ui-icon-pause:after {
+	background-image: url("../images/Pause.svg");
+}
+/* Fallback */
+.ui-nosvg .ui-icon-pause:after {
+	background-image: url("../images/Pause.png");
+}
+
+.ui-icon-muted:after {
+	background-image: url("../images/Muted.svg");
+}
+/* Fallback */
+.ui-nosvg .ui-icon-muted:after {
+	background-image: url("../images/Muted.png");
+}
+
+.ui-icon-unmuted:after {
+	background-image: url("../images/Unmuted.svg");
+}
+/* Fallback */
+.ui-nosvg .ui-icon-unmuted:after {
+	background-image: url("../images/Unmuted.png");
+}
