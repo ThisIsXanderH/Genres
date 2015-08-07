@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<widget
+		id			=	"com.cagedrobot.genres"
+		version		=	"0.1.0">
+		
+	<name>Genres!</name>
+	<description>
+		A fun and challenging game for writers
+	</description>
+	<author href="http://cagedrobot.com/ email='AlexanderFreemason1996@gmail.com'">
+		Xander
+	</author>
+</widget>
