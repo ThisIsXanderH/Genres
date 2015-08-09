@@ -10,7 +10,9 @@
 	<author href="http://cagedrobot.com/ email='AlexanderFreemason1996@gmail.com'">
 		Xander
 	</author>
+	
+	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
+	
 
 </widget>
-
-<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.1.0" />

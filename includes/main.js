@@ -7,8 +7,6 @@ Also I tend to swear in the comments that are there.
 
 TODO: Fix both those things?
 */
-window.plugin.statusbarOverlay.hide(); //Documentation: https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay/blob/aef5a90d2161dd9d363242523883757a51d0fad0/README.md
-
 
 $('#titleButtonSetup').click(function() {
 	location.href='#pageSetup'; //NOTE: Continue condensing all of these down with data-*
