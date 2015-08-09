@@ -18,6 +18,28 @@
 <!-- Include the jQuery Mobile library -->
 <script src="includes/jquery.mobile-1.4.5.min.js"></script>
 
+<!-- Include Phonegap API -->
+<script src="phonegap.js"></script>
+
+<!--
+MAJOR TODO LIST:
+Okay, just tested on mobile through PhoneGap. Immediate bugs that spring to mind:
+-Links don't open externally, and there is some generally odd behaviour around them
+-Hide top bar (w/ signal, time, all that)
+-Noise played overrides whatever music is playing, on a kinda permanent basis. Like - it stops music, then if you press play after it'll just play the app sound (instead of whatever music was on before)
+	-http://docs.phonegap.com/en/edge/cordova_media_media.md.html Swapping audio to this looks like the go
+-No icon or splash screen or any of that shizaz
+-->
+<!--
+MINOR TODO LIST:
+-Fix CSS for game page. The times are not spread out as nicely as in the Chrome preview. Check Flex support?
+	-My initial response would be to get the window size and maths that fucker like nobodies business
+-Ditto for main page actually
+-This has been a thing for a while, but when the game flashes for alarm it doesn't do the top section (in line with the back button and accompanying div)
+-Do I need to use $(document).ready? /should I?
+-->
+
+
 <meta charset="utf-8">
 <title>Genres! A fun and challenging game for writers</title>
 </head>

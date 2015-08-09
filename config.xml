@@ -10,4 +10,6 @@
 	<author href="http://cagedrobot.com/ email='AlexanderFreemason1996@gmail.com'">
 		Xander
 	</author>
+	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
+
 </widget>

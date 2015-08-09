@@ -7,6 +7,8 @@ Also I tend to swear in the comments that are there.
 
 TODO: Fix both those things?
 */
+window.plugin.statusbarOverlay.hide(); //Documentation: https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay/blob/aef5a90d2161dd9d363242523883757a51d0fad0/README.md
+
 
 $('#titleButtonSetup').click(function() {
 	location.href='#pageSetup'; //NOTE: Continue condensing all of these down with data-*
@@ -37,7 +39,8 @@ $('#gameButtonUnmute').hide();
 $('#setupVibrate').hide();
 
 $('.external-link').click(function() {
-	window.open($(this).attr('data-link'),'_system');
+	//window.open($(this).attr('data-link'),'_system');
+	navigator.app.loadUrl($(this).data('link'),{openExternal:true});
 });
 
 
@@ -227,9 +230,11 @@ $('.setupTimerChange').on("change", function() {setupCalculateTotalTime()});
 var invertTimer = [],
 	revertTimer = [],
 	globVibrate,
-	alarmSound = document.createElement('audio');
+	alarmSound = new Media('sounds/alarm.wav');
+	
+	//document.createElement('audio');
 				
-	alarmSound.setAttribute('src','sounds/alarm1.wav'); //CURRENT: http://soundbible.com/529-Pager-Beeps.html (Credit Mike Koenig)
+	//alarmSound.setAttribute('src','sounds/alarm1.wav'); //CURRENT: http://soundbible.com/529-Pager-Beeps.html (Credit Mike Koenig)
 function alertInvert() {
 	//What the fuck even are these functions at this stage?
 }
@@ -249,7 +254,8 @@ function alertUserClear() {
 	}
 	$('#gameContent').removeClass('inverted');
 	alarmSound.pause();
-	alarmSound.currentTime = 0;
+	alarmSound.seekTo(0);
+	//alarmSound.currentTime = 0;
 	
 }
 
@@ -259,6 +265,7 @@ function alertUser(vibrate) {
 	if(!muted) {
 		alarmSound.play();
 	}
+	navigator.vibrate(500);
 	if(vibrate) {
 		
 	} else {
