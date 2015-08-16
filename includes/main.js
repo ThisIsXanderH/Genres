@@ -34,14 +34,16 @@ $('#pauseButtonResume').click(function() {
 
 $('#gameButtonUnmute').hide();
 
-$('#setupVibrate').hide();
+//$('#setupVibrate').hide();
 
 $('.external-link').click(function() {
 	//window.open($(this).attr('data-link'),'_system');
 	//navigator.app.loadUrl($(this).data('link'),{openExternal:true});
 	//window.open($(this).data('link'),'_system');
-	window.open($(this).data('link'),'_system');
-	return false;
+	window.open($(this).data('link'),'_system'); //Why is this here once commented out, once not?
+	//return false; Why is this even here?
+	//I hate you
+	// <3
 });
 
 
@@ -266,8 +268,9 @@ function alertUser(vibrate) {
 	if(!muted) {
 		alarmSound.play();
 	}
-	navigator.vibrate(500);
+	navigator.vibrate(500); //TODO: There's two for testing reasons, remove one yo. Also nice outfit, you sexy thing.
 	if(vibrate) {
+		navigator.vibrate(500);
 		
 	} else {
 		
