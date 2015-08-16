@@ -11,7 +11,8 @@
 		Xander
 	</author>
 	
-	
+	<gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
     <feature name="http://api.phonegap.com/1.0/file"/>
