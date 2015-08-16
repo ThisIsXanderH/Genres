@@ -26,7 +26,9 @@ body {
 	max-height:100%;
 	bottom:0;
 }
-
+/*
+TODO: Move everything down to account for statusbar
+*/
 
 #setupButtonBack, #gameButtonBack, #supportButtonBack, #creditsButtonBack, #howButtonBack {
 	position:absolute;
