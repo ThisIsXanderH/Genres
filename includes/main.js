@@ -39,7 +39,9 @@ $('#setupVibrate').hide();
 $('.external-link').click(function() {
 	//window.open($(this).attr('data-link'),'_system');
 	//navigator.app.loadUrl($(this).data('link'),{openExternal:true});
+	//window.open($(this).data('link'),'_system');
 	window.open($(this).data('link'),'_system');
+	return false;
 });
 
 
@@ -229,7 +231,7 @@ $('.setupTimerChange').on("change", function() {setupCalculateTotalTime()});
 var invertTimer = [],
 	revertTimer = [],
 	globVibrate,
-	alarmSound = new Media('sounds/alarm.mp3');
+	alarmSound = new Media('audio/alarm1.mp3');
 	
 	//document.createElement('audio');
 				

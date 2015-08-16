@@ -12,7 +12,21 @@
 		Xander
 	</author>
 	
+	
+	<!--Media Plugin (For sound playing)-->
 	<gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+	
+	<!--Status Bar Plugin (For hiding status bar on iOS)-->
+	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	
+	<gap:config-file platform="ios" parent="UIStatusBarHidden">
+		<true/>
+	</gap:config-file>
+	
+	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+		<false/>
+	</gap:config-file>
+
 
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
