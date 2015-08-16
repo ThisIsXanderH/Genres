@@ -233,7 +233,7 @@ $('.setupTimerChange').on("change", function() {setupCalculateTotalTime()});
 var invertTimer = [],
 	revertTimer = [],
 	globVibrate,
-	alarmSound = new Media('audio/alarm1.wav');
+	alarmSound = new Media('audio/alarm1.wav',function() {alert()});
 	
 	//document.createElement('audio');
 				
