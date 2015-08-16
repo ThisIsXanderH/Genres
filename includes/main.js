@@ -233,7 +233,7 @@ $('.setupTimerChange').on("change", function() {setupCalculateTotalTime()});
 var invertTimer = [],
 	revertTimer = [],
 	globVibrate,
-	alarmSound = new Media('audio/alarm1.mp3');
+	alarmSound = new Media('audio/alarm1.wav');
 	
 	//document.createElement('audio');
 				
@@ -244,6 +244,12 @@ function alertInvert() {
 function alertRevert() {
 	
 }
+
+$('#setupVibrate').change(function() {
+	if(this.checked) {
+		navigator.vibrate(500);
+	}
+});
 
 function toggleInvert() {
 	$('#gameContent').toggleClass('inverted');
