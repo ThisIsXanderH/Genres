@@ -14,7 +14,7 @@
 	
 	
 	<!--Media Plugin (For sound playing)-->
-	<gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+	<gap:plugin name="org.apache.cordova.media" version="0.2.13" />
 	
 	<!--Status Bar Plugin (For hiding status bar on iOS)-->
 	<gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
