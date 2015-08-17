@@ -82,9 +82,8 @@ $('#setupButtonStart').click(function() {
 	promptNum,
 	promptText,
 	promptLink;
-				$('#gameButtonPause').attr('disabled',true);
 	
-	//timerLength = 10000; ///TODO: Don't forget to remove this. It's just for testing.
+	$('#gameButtonPause').attr('disabled',true);
 	
 	timer = [];
 	vibrate = $('#setupVibrate').is(':checked');
@@ -277,7 +276,6 @@ function alertUser(vibrate) {
 	if(!muted) {
 		alarmSound.play();
 	}
-	navigator.vibrate(500); //TODO: There's two for testing reasons, remove one yo. Also nice outfit, you sexy thing.
 	if(vibrate) {
 		navigator.vibrate(500);
 		

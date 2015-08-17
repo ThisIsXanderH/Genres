@@ -28,6 +28,7 @@ body {
 }
 /*
 TODO: Move everything down to account for statusbar
+NOTE: Statusbar isn't an issue any more, but it might be a bit cramped up top
 */
 
 #setupButtonBack, #gameButtonBack, #supportButtonBack, #creditsButtonBack, #howButtonBack {
@@ -135,14 +136,6 @@ ul {
 .inverted {
 	background-color:#000000;
 	color:#FFFFFF;
-}
-
-#setupVibrate {
-	position:fixed;
-	left:-300px;
-	top:-300px;
-	/* TODO: This does not works. Make it invisible for a bit.
-	NOTE: Currently just moved to page that is never shown*/
 }
 
 #gamePromptLink {

@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id			=	"com.cagedrobot.genres"
 		version		=	"0.1.0">
-		
+		<!-- NOTE: Without the xmlns:gap part, plugins flatout don't work -->
 	<name>Genres!</name>
 	<description>
 		A fun and challenging game for writers
@@ -11,8 +11,15 @@
 	<author href="http://cagedrobot.com/ email='AlexanderFreemason1996@gmail.com'">
 		Xander
 	</author>
+	<icon src="icon.png"/>
+	<gap:splash src="splash.png" />
 	
+	<preference name="orientation" value="portrait" />
+	<preference name="fullscreen" value="true" />
 	
+	<!-- TODO: Check to see if you need to whitelist external links 
+	NOTE: Looks to be that that's only for webview stuff. It's fine if you're using external windows.
+	-->
 	<!--Media Plugin (For sound playing)-->
 	<gap:plugin name="org.apache.cordova.media" version="0.2.13" />
 	
